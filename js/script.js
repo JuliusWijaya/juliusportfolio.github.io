@@ -3,7 +3,7 @@ $('.page-scroll').on('click', function(e){
 
     //ambil isi href
     var tujuan = $(this).attr('href');
-    console.log(href);
+
     //tangkap elemen ybs
     var elemenTujuan = $(tujuan);
 
@@ -11,9 +11,7 @@ $('.page-scroll').on('click', function(e){
     //pindahkan scroll
     $('html, body').animate({
         scrollTop: elemenTujuan.offset().top - 50
-    }, 1250, 'easeInOutExpo');
-
-
+    }, 1000, 'easeInOutExpo');
 
     e.preventDefault();
 });
@@ -45,15 +43,15 @@ $(window).scroll(function(){
     });
 
 
-    // //portfolio
-    // if(wScroll > $('.portfolio').offset().top - 250) {
-    //     $('.portfolio .thumbnail').each(function(i){
-    //         setTimeout(function() {
-    //                $('.portofolio .thumbnail').eq(i).addClass('muncul');
-    //         }, 300 * (i+1));
-    //     });
+    portfolio
+    if(wScroll > $('.portfolio').offset().top - 250) {
+        $('.portfolio .thumbnail').each(function(i){
+            setTimeout(function() {
+                   $('.portofolio .thumbnail').eq(i).addClass('muncul');
+            }, 300 * (i+1));
+        });
 
     
-    // }
+    }
 
 })
